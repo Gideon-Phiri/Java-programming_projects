@@ -20,6 +20,24 @@ public class CourseManagement {
         saveCourses();
     }
 
+    // Method to update a course
+    public static void updateCourse(String oldCourseCode, String newCourseCode, String newCourseName, int newMaxCapacity) {
+        Course course = getCourseByCode(oldCourseCode);
+        if (course != null) {
+            course.updateCourseInfo(newCourseCode, newCourseName, newMaxCapacity);
+            saveCourses();
+        }
+    }
+
+    // Method to remove a course
+    public static void removeCourse(String courseCode) {
+        Course course = getCourseByCode(courseCode);
+        if (course != null) {
+            courses.remove(course);
+            saveCourses();
+        }
+    }
+
     // Method to enroll a student in a course
     public static void enrollStudent(Student student, Course course) {
         student.enrollInCourse(course);
@@ -59,6 +77,29 @@ public class CourseManagement {
     public static void addStudent(Student student) {
         students.put(student.getId(), student);
         saveStudents();
+    }
+
+    // Method to update student information
+    public static void updateStudent(String id, String newName, String newId) {
+        Student student = getStudentById(id);
+        if (student != null) {
+            student.updateStudentInfo(newName, newId);
+            saveStudents();
+        }
+    }
+
+    // Method to list all courses with enrollment details
+    public static void listCourses() {
+        for (Course course : courses) {
+            course.displayCourseDetails();
+        }
+    }
+
+    // Method to list all students with their enrolled courses
+    public static void listStudents() {
+        for (Student student : students.values()) {
+            student.displayEnrolledCourses();
+        }
     }
 
     // Save courses to file

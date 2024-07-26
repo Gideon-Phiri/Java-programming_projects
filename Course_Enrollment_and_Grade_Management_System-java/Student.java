@@ -33,7 +33,7 @@ public class Student implements Serializable {
 
     // Method to enroll in a course
     public void enrollInCourse(Course course) {
-        if (!enrolledCourses.containsKey(course) && course.addStudent()) {
+        if (!enrolledCourses.containsKey(course) && course.addStudent(this)) {
             enrolledCourses.put(course, null);
         }
     }
@@ -62,5 +62,18 @@ public class Student implements Serializable {
     public Map<Course, Double> getEnrolledCourses() {
         return enrolledCourses;
     }
-}
 
+    // Method to update student information
+    public void updateStudentInfo(String name, String id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    // Method to display enrolled courses
+    public void displayEnrolledCourses() {
+        System.out.println("Student ID: " + id + ", Name: " + name);
+        for (Course course : enrolledCourses.keySet()) {
+            System.out.println(" - Enrolled in: " + course.getCourseCode() + " (" + course.getCourseName() + ")");
+        }
+    }
+}

@@ -7,10 +7,15 @@ public class AdministratorInterface {
         while (true) {
             System.out.println("\n=== Course Enrollment and Grade Management System ===");
             System.out.println("1. Add a new course");
-            System.out.println("2. Enroll student in a course");
-            System.out.println("3. Assign grade to a student");
-            System.out.println("4. Calculate overall grade for a student");
-            System.out.println("5. Exit");
+            System.out.println("2. Update a course");
+            System.out.println("3. Remove a course");
+            System.out.println("4. Enroll student in a course");
+            System.out.println("5. Assign grade to a student");
+            System.out.println("6. Calculate overall grade for a student");
+            System.out.println("7. Update student information");
+            System.out.println("8. List all courses");
+            System.out.println("9. List all students and their enrolled courses");
+            System.out.println("10. Exit");
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -20,15 +25,30 @@ public class AdministratorInterface {
                     addCourse();
                     break;
                 case 2:
-                    enrollStudent();
+                    updateCourse();
                     break;
                 case 3:
-                    assignGrade();
+                    removeCourse();
                     break;
                 case 4:
-                    calculateOverallGrade();
+                    enrollStudent();
                     break;
                 case 5:
+                    assignGrade();
+                    break;
+                case 6:
+                    calculateOverallGrade();
+                    break;
+                case 7:
+                    updateStudent();
+                    break;
+                case 8:
+                    listCourses();
+                    break;
+                case 9:
+                    listStudents();
+                    break;
+                case 10:
                     System.exit(0);
                     break;
                 default:
@@ -53,6 +73,37 @@ public class AdministratorInterface {
         int maxCapacity = Integer.parseInt(maxCapacityStr);
         CourseManagement.addCourse(courseCode, courseName, maxCapacity);
         System.out.println("Course added successfully.");
+    }
+
+    private static void updateCourse() {
+        System.out.print("Enter the course code to update (or type 'quit' to cancel): ");
+        String oldCourseCode = scanner.nextLine();
+        if (oldCourseCode.equalsIgnoreCase("quit")) return;
+
+        System.out.print("Enter new course code (or type 'quit' to cancel): ");
+        String newCourseCode = scanner.nextLine();
+        if (newCourseCode.equalsIgnoreCase("quit")) return;
+
+        System.out.print("Enter new course name (or type 'quit' to cancel): ");
+        String newCourseName = scanner.nextLine();
+        if (newCourseName.equalsIgnoreCase("quit")) return;
+
+        System.out.print("Enter new maximum capacity (or type 'quit' to cancel): ");
+        String newMaxCapacityStr = scanner.nextLine();
+        if (newMaxCapacityStr.equalsIgnoreCase("quit")) return;
+
+        int newMaxCapacity = Integer.parseInt(newMaxCapacityStr);
+        CourseManagement.updateCourse(oldCourseCode, newCourseCode, newCourseName, newMaxCapacity);
+        System.out.println("Course updated successfully.");
+    }
+
+    private static void removeCourse() {
+        System.out.print("Enter the course code to remove (or type 'quit' to cancel): ");
+        String courseCode = scanner.nextLine();
+        if (courseCode.equalsIgnoreCase("quit")) return;
+
+        CourseManagement.removeCourse(courseCode);
+        System.out.println("Course removed successfully.");
     }
 
     private static void enrollStudent() {
@@ -135,5 +186,35 @@ public class AdministratorInterface {
 
         double overallGrade = CourseManagement.calculateOverallGrade(student);
         System.out.println("Overall grade for student " + student.getName() + ": " + overallGrade);
+    }
+
+    private static void updateStudent() {
+        System.out.print("Enter the current student ID (or type 'quit' to cancel): ");
+        String oldId = scanner.nextLine();
+        if (oldId.equalsIgnoreCase("quit")) return;
+
+        Student student = CourseManagement.getStudentById(oldId);
+        if (student != null) {
+            System.out.print("Enter new student name (or type 'quit' to cancel): ");
+            String newName = scanner.nextLine();
+            if (newName.equalsIgnoreCase("quit")) return;
+
+            System.out.print("Enter new student ID (or type 'quit' to cancel): ");
+            String newId = scanner.nextLine();
+            if (newId.equalsIgnoreCase("quit")) return;
+
+            CourseManagement.updateStudent(oldId, newName, newId);
+            System.out.println("Student information updated successfully.");
+        } else {
+            System.out.println("Student not found.");
+        }
+    }
+
+    private static void listCourses() {
+        CourseManagement.listCourses();
+    }
+
+    private static void listStudents() {
+        CourseManagement.listStudents();
     }
 }

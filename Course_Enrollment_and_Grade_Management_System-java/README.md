@@ -6,11 +6,11 @@
 
 ⭐ Star me on GitHub — it will motivates me a lot!
 
-[![Share](https://img.shields.io/badge/share-000000?logo=x&logoColor=white)](https://x.com/intent/tweet?text=Check%20out%20this%20project%20on%20GitHub:%20https://github.com/Gideon-Phiri/Java-programming_projects/tree/master/students-enrollment_system.)
-[![Share](https://img.shields.io/badge/share-1877F2?logo=facebook&logoColor=white)](https://www.facebook.com/sharer/sharer.php?u=https://github.com/Gideon-Phiri/Java-programming_projects/tree/master/students-enrollment_system)
-[![Share](https://img.shields.io/badge/share-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/Gideon-Phiri/Java-programming_projects/tree/master/students-enrollment_system)
-[![Share](https://img.shields.io/badge/share-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/submit?title=Check%20out%20this%20project%20on%20GitHub:%20https://github.com/Gideon-Phiri/Java-programming_projects/tree/master/students-enrollment_system)
-[![Share](https://img.shields.io/badge/share-0088CC?logo=telegram&logoColor=white)](https://t.me/share/url?url=https://github.com/Gideon-Phiri/Java-programming_projects/tree/master/students-enrollment_system&text=Check%20out%20this%20project%20on%20GitHub)
+[![Share](https://img.shields.io/badge/share-000000?logo=x&logoColor=white)](https://x.com/intent/tweet?text=Check%20out%20this%20project%20on%20GitHub:%20https://github.com/Gideon-Phiri/Java-programming_projects/tree/main/Course_Enrollment_and_Grade_Management_System-java.)
+[![Share](https://img.shields.io/badge/share-1877F2?logo=facebook&logoColor=white)](https://www.facebook.com/sharer/sharer.php?u=https://github.com/Gideon-Phiri/Java-programming_projects/tree/main/Course_Enrollment_and_Grade_Management_System-java)
+[![Share](https://img.shields.io/badge/share-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/Gideon-Phiri/Java-programming_projects/tree/main/Course_Enrollment_and_Grade_Management_System-java)
+[![Share](https://img.shields.io/badge/share-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/submit?title=Check%20out%20this%20project%20on%20GitHub:%20https://github.com/Gideon-Phiri/Java-programming_projects/tree/main/Course_Enrollment_and_Grade_Management_System-java)
+[![Share](https://img.shields.io/badge/share-0088CC?logo=telegram&logoColor=white)](https://t.me/share/url?url=https://github.com/Gideon-Phiri/Java-programming_projects/tree/main/Course_Enrollment_and_Grade_Management_System-java&text=Check%20out%20this%20project%20on%20GitHub)
 
 ## Table of Contents
 
@@ -103,7 +103,7 @@ Follow the following steps to run the program from your CLI
 git clone https://github.com/Gideon-Phiri/Java-programming_projects.git
 
 # Navigate to the project directory
-cd students-enrollment_system
+cd Course_Enrollment_and_Grade_Management_System-java
 
 # Compile all the Java files
 javac AdministratorInterface.java student.java course.java courseManagement.java
@@ -132,13 +132,13 @@ We've made every effort to implement all the main aspects of the app in the best
 > [!IMPORTANT]
 > Whether you have feedback on features, have encountered any bugs, or have suggestions for enhancements, we're eager to hear from you. Your insights help us make this app more robust and user-friendly.
 
-Please feel free to contribute by [submitting an issue](https://github.com/Gideon-Phiri/Java-programming_projects/tree/master/students-enrollment_system/issues). Each contribution helps us grow and improve.
+Please feel free to contribute by [submitting an issue](https://github.com/Gideon-Phiri/Java-programming_projects/issues). Each contribution helps us grow and improve.
 
 We appreciate your support and look forward to making our product even better with your help!
 
 ## 📃 License
 
-This Project is part of [UoPeople Image](./gitimg/uopeople.png) class **programing assignments** instructed by **Sir Marcellous Simeon**
+This Project is part of ![UoPeople](./gitimg/uopeople.png) class **programing assignments** instructed by **Sir Marcellous Simeon**
 
 For non-commercial use, this product is available for free.
 
@@ -154,14 +154,18 @@ Subscribe to my LinkedIn:
 
 ## Author
 
-**Gideon Phiri**
-_Software Engineer_
-_[gideonphiri032@gmail.com](mailto:gideonphiri032@gmail.com)_
+- **Gideon Phiri**
+- _Software Engineer_
+- _[gideonphiri032@gmail.com](mailto:gideonphiri032@gmail.com)_
 
 ## Course Instructor
 
-**Marcellous Simeon**
-_UoPeople Course Instructor_
+- **Marcellous Simeon**
+- _UoPeople Course Instructor_
+
+---
+
+##
 
 I look forward to assisting you and ensuring your experience with this project is successful and enjoyable!
 
